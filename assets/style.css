@@ -1,8 +1,60 @@
-.body{
+*{
+    box-sizing: border-box;
+
+}
+
+
+body {
+    background-image: url("./images/rain.jpg");
+    background-color: #212529;
+    margin: 0;
+    padding: 0;
+    color: rgb(226, 31, 31);
+    line-height: 1.5;
+    font-size: 16px;
+}
+main{
+    margin: 20px auto;
+    width:94%
+}
+
+.card-header{
+    background-color: #212529;
+    border-radius: 15px;
+    border:3px solid black;
+    outline: black;
+    font-weight: bold;
+    color: #fff;
+}
+
+.btn {
+    background-color: #606162;
+    color:white;
+    border-radius: 3px;
+    border:3px solid black;
+    outline: black;
+
+
+}
+
+.btn:hover{
     background-color: aqua;
 }
 
-.col-md-3 {
-    color:black;
-    padding: 24px;
+.page-title{
+    font-size: 70px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-color:#212529;
+    
+}
+
+.card-body {
+    background-color: #212529;
+    border-radius: 15px;
+    border: 3px solid black;
+    outline: black;
+}
+
+.user-form{
+    background-color: #212529;
 }
