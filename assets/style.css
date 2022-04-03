@@ -1,7 +1,8 @@
-*{
+/* *{
     box-sizing: border-box;
+    padding: 1px;
 
-}
+} */
 
 
 body {
@@ -41,20 +42,74 @@ main{
     background-color: aqua;
 }
 
+.hero {
+    padding: 3% 4%;
+    
+    color: #fff;
+}
 .page-title{
     font-size: 70px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    background-color:#212529;
-    
+    background-color:rgba(0, 0, 255, 0);                                        
+    padding: 0 10px;
+    display: inline-block;
 }
 
 .card-body {
     background-color: #212529;
     border-radius: 15px;
-    border: 3px solid black;
+    border: 5px solid black;
     outline: black;
 }
 
+.card{
+    background-color:rgba(0, 0, 0, 0)
+}
 .user-form{
     background-color: #212529;
+}
+
+ul {
+    list-style-type: none;
+    line-height: 2;
+}
+
+li:first-letter {
+    text-transform: capitalize;
+}
+
+.custom-li:hover {
+    cursor:pointer;
+}
+
+.custom-li {
+    font-size: 20px;
+    font-weight: bold;
+    padding-left: 2px;
+    border-radius: 15px;
+    border: solid;
+    border-width: 2px;
+    border-color:transparent;
+    color:#fff;
+    text-align: center;
+}
+.low-uv {
+    background-color: rgba(0, 128, 0, 0.516);
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.medium-uv {
+    background-color: rgba(255, 255, 0, 0.436);
+    padding: 5px;
+    border-radius: 5px;
+    
+}
+
+.high-uv {
+    background-color: rgba(255, 0, 0, 0.495);
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
 }
