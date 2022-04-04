@@ -89,7 +89,7 @@ searchEl.addEventListener('submit', function(event){
 function displayCurrentWeather(name, resultObject) {
     var resultCard = document.createElement('div');
     resultCard.classList.add('card', 'bg-dark', 'text-light', 'm-1', 'p-0'); 
-
+    
     var resultBody = document.createElement('div');
     resultBody.classList.add('card-body');
     resultCard.append(resultBody);
