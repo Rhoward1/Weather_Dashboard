@@ -1,9 +1,3 @@
-/* *{
-    box-sizing: border-box;
-    padding: 1px;
-
-} */
-
 
 body {
     background-image: url("./images/rain.jpg");
@@ -19,11 +13,15 @@ main{
     width:94%
 }
 
+p{
+    line-height:2.5;
+}
 .card-header{
     background-color: #212529;
     border-radius: 15px;
     border:3px solid black;
     outline: black;
+    line-height: 2.0;
     font-weight: bold;
     color: #fff;
 }
@@ -53,6 +51,9 @@ main{
     background-color:rgba(0, 0, 255, 0);                                        
     padding: 0 10px;
     display: inline-block;
+    color: white;
+	font-size: 80px;
+	-webkit-text-stroke: 2px black;
 }
 
 .card-body {
@@ -60,6 +61,7 @@ main{
     border-radius: 15px;
     border: 5px solid black;
     outline: black;
+    
 }
 
 .card{
@@ -83,7 +85,9 @@ li:first-letter {
 }
 
 .custom-li {
-    font-size: 20px;
+    color: white;
+	font-size: 25px;
+	-webkit-text-stroke: 2px black;
     font-weight: bold;
     padding-left: 2px;
     border-radius: 15px;
@@ -92,6 +96,9 @@ li:first-letter {
     border-color:transparent;
     color:#fff;
     text-align: center;
+    background-color: #2125293d;
+    margin:auto;
+    text-shadow: 5px 15px 15px black;
 }
 .low-uv {
     background-color: rgba(0, 128, 0, 0.516);

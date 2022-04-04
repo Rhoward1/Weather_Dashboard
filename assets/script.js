@@ -1,6 +1,3 @@
-// display items in searchlist
-//for loop to create forcast cards
-
 var searchEl = document.querySelector('#user-form')
 var searchedCity = document.querySelector('.form-input')
 var searchBtn = document.querySelector('.search-btn')
@@ -10,12 +7,13 @@ var cityList = document.querySelector('.list-group')
 
 var cityHistory = [];
 
+// display items in searchlist
 
 function displayCityHistory() {
     
     cityList.innerHTML = "";
 
-    
+ // loop to build list for previous search history   
     for (var i = 0; i < cityHistory.length; i++) {
         var cityHistorySearch = cityHistory[i];
 
@@ -26,7 +24,8 @@ function displayCityHistory() {
         cityList.appendChild(li);   
     }
 
-    
+  // event listener to make list function 
+
     cityList.addEventListener('click', function(event){     
         console.log(event)
         var element = event.target;
@@ -42,6 +41,7 @@ function displayCityHistory() {
 
 }
 
+//grabs list from local storage when page loads
 
 function getCityHistory() {
     
@@ -60,6 +60,7 @@ function storeCities() {
     localStorage.setItem('cityHistory', JSON.stringify(cityHistory));
 }
 
+// event listener for search submitfunction
 
 searchEl.addEventListener('submit', function(event){
     console.log(event)
@@ -83,6 +84,7 @@ searchEl.addEventListener('submit', function(event){
 
 });
 
+// function to display the current weather section
 
 function displayCurrentWeather(name, resultObject) {
     var resultCard = document.createElement('div');
@@ -105,7 +107,7 @@ function displayCurrentWeather(name, resultObject) {
     bodyContentEl.innerHTML = '<strong>Temperature:</strong> ' + resultObject.current.temp + ' °F' + '<br/>';
     bodyContentEl.innerHTML += '<strong>Humidity:</strong> ' + resultObject.current.humidity + "%"+ '<br/>';
     bodyContentEl.innerHTML += '<strong>Wind:</strong> ' + resultObject.current.wind_speed + " MPH"+ '<br/>';
-
+// adds color change to uv Index
     var uvText = document.createElement('p');
     var uvEl = document.createElement('span');
     var uvIndex = uvEl.textContent = resultObject.current.uvi
@@ -126,8 +128,10 @@ function displayCurrentWeather(name, resultObject) {
     currentWeatherEl.append(resultCard);
 }
 
+// function to display daily forecast on cards
 function displayForecastWeather(resultObject) {
-    
+
+// loop to build cards for daily forecast    
     for (var i = 1; i < 6; i++) {
         var resultColumn = document.createElement('div');
         resultColumn.classList.add('col-md-2.5','m-auto');
@@ -158,6 +162,8 @@ function displayForecastWeather(resultObject) {
     }
 }
 
+//Function to call the openweather API and get the city name, lat and long
+
 function getAPI(cityID) {
     var key = 'f56d1776328f8889a900d590d64b46a9';
     fetch('https://api.openweathermap.org/data/2.5/weather?q=' + cityID+ '&units=imperial&&appid=' + key)
@@ -169,6 +175,7 @@ function getAPI(cityID) {
 
    
 }
+
 
 
 function getWeatherAPI(name, lat, lon) {
