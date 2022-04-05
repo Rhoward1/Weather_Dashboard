@@ -16,17 +16,17 @@ main{
 p{
     line-height:2.5;
 }
+
+
 .card-header{
     background-color: #21252900;
     border-radius: 15px solid black;
-    /* border:3px solid black; */
     outline: black;
     line-height: 2.0;
     font-weight: bold;
-    text-align: center;
     color: #fff;
     -webkit-text-stroke: 2px black;
-    font-size: 40px;
+    font-size: 35px;
     
 }
 
@@ -36,8 +36,7 @@ p{
     border-radius: 3px;
     border:3px solid black;
     outline: black;
-
-
+    
 }
 
 .btn:hover{
@@ -63,19 +62,24 @@ p{
 
 .card-body {
     background-color: #212529;
-    border-radius: 15px;
+    border-radius: 10px;
     border: 5px solid black;
-    outline: black;
+    outline: black; 
+}
+form {
+    max-width:100%;
+    
     
 }
-
 .card{
     background-color:rgba(0, 0, 0, 0)
 }
-.user-form{
+#user-form{
     background-color: #212529;
     -webkit-text-stroke: 2px black;
     outline: 2px black;
+    width: 300px;
+       
 }
 
 ul {
@@ -98,13 +102,12 @@ li:first-letter {
 	-webkit-text-stroke: 2px black;
     font-weight: bold;
     padding-left: 2px;
-    border-radius: 15px;
+    border-radius: 10px;
     border: solid;
     border-width: 2px;
     border-color:transparent;
-    text-align: center;
     background-color: #2125293d;
-    margin:auto;
+    
     text-shadow: 5px 15px 15px black;
 }
 .low-uv {
@@ -127,3 +130,5 @@ li:first-letter {
     padding: 5px;
     border-radius: 5px;
 }
+
+
